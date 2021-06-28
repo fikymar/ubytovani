@@ -36,7 +36,7 @@ let play;
 
 const slide = (currentIndex) => {
     dots.forEach((dot) => {
-       
+
         dot.classList.remove('active--dot');
     });
 
@@ -55,49 +55,49 @@ const slide = (currentIndex) => {
 }
 
 dots.forEach((dot, i) => {
-       
-    dot.addEventListener('click', 
-    () => {
-        slide(i);
-    })
+
+    dot.addEventListener('click',
+        () => {
+            slide(i);
+        })
 
 });
 
-    const autoplay = () => {
-        play = setInterval(function () {
+const autoplay = () => {
+    play = setInterval(function () {
 
-            dots.forEach((dot) => {
-        
-                dot.classList.remove('active--dot');
-            });
-        
-        
-            carouselVideo.forEach((video) => {
-                video.classList.remove('active--video')
-            });
-        
-            carouselSlides.forEach((slide) => {
-                slide.classList.remove('active--slide')
-            });
+        dots.forEach((dot) => {
 
-        
-            slideNr++;
+            dot.classList.remove('active--dot');
+        });
 
-            if (slideNr > (carouselSlides.length - 1)) {
-                slideNr = 0;
-            }
-        
-            dots[slideNr].classList.add('active--dot');
-            carouselVideo[slideNr].classList.add('active--video');
-            carouselSlides[slideNr].classList.add('active--slide');
-        
-        }, 5000);
-    };
-    autoplay()
-  
+
+        carouselVideo.forEach((video) => {
+            video.classList.remove('active--video')
+        });
+
+        carouselSlides.forEach((slide) => {
+            slide.classList.remove('active--slide')
+        });
+
+
+        slideNr++;
+
+        if (slideNr > (carouselSlides.length - 1)) {
+            slideNr = 0;
+        }
+
+        dots[slideNr].classList.add('active--dot');
+        carouselVideo[slideNr].classList.add('active--video');
+        carouselSlides[slideNr].classList.add('active--slide');
+
+    }, 5000);
+};
+autoplay()
+
 // change nav, logo on scroll
 const scrollOptions = {
-    root:null,
+    root: null,
     threshold: 0.5,
     rootMargin: '0px 0px 0px 0px'
 };
@@ -105,41 +105,41 @@ const scrollOptions = {
 
 const scrollObserver = new IntersectionObserver((entries, scrollObserver) => {
     entries.forEach(entry => {
-    if ((!entry.isIntersecting) && (window.innerWidth > 1024)) {
-        nav.classList.add('inverse');
-        links.forEach(link => {
-            link.classList.add('inverse__links')
-        })
-    } else {
-        nav.classList.remove('inverse');
-        links.forEach(link => {
-            link.classList.remove('inverse__links')
-        })
+        if ((!entry.isIntersecting) && (window.innerWidth > 1024)) {
+            nav.classList.add('inverse');
+            links.forEach(link => {
+                link.classList.add('inverse__links')
+            })
+        } else {
+            nav.classList.remove('inverse');
+            links.forEach(link => {
+                link.classList.remove('inverse__links')
+            })
         }
 
 
-    if (!entry.isIntersecting) {
-        freeBTN.style.letterSpacing = '1px';
-        freeBTN.style.boxShadow = `0px 5px 10px 2px ${greyblack}`;
-            
-    } else {
-        freeBTN.style.letterSpacing = '2px';
-        freeBTN.style.boxShadow = 'none';
-    }
+        if (!entry.isIntersecting) {
+            freeBTN.style.letterSpacing = '1px';
+            freeBTN.style.boxShadow = `0px 5px 10px 2px ${greyblack}`;
 
-    if ((!entry.isIntersecting) && (window.innerWidth <= 1024)) {
-        logoHTML.innerHTML = '<i class="fas fa-arrow-alt-circle-up"></i>';
-        logo.style.top = '92vh';
-        logo.style.right = '0.5rem';
-           
-    } else {
-        logoHTML.innerHTML = 'Ubytování U Jaklů';
-        logo.style.top = '1rem'; 
+        } else {
+            freeBTN.style.letterSpacing = '2px';
+            freeBTN.style.boxShadow = 'none';
+        }
+
+        if ((!entry.isIntersecting) && (window.innerWidth <= 1024)) {
+            logoHTML.innerHTML = '<i class="fas fa-arrow-alt-circle-up"></i>';
+            logo.style.top = '92vh';
+            logo.style.right = '0.5rem';
+
+        } else {
+            logoHTML.innerHTML = 'Ubytování U Jaklů';
+            logo.style.top = '1rem';
         }
 
 
-       
-        
+
+
     })
 }, scrollOptions);
 
@@ -148,12 +148,12 @@ scrollObserver.observe(carouselSection);
 
 //nav
 hamburger.addEventListener('click', () => {
-  
+
     navList.classList.toggle('open');
 
     links.forEach(link => {
         link.classList.toggle("visible");
-       
+
     });
 
     line1.classList.toggle('cross--first');
@@ -168,10 +168,10 @@ if (window.innerWidth < 1025) {
             links.forEach(link => {
                 link.classList.toggle("visible");
             });
-        
+
         });
     });
-    
+
 }
 
 //overlay
@@ -182,58 +182,29 @@ if (window.innerWidth < 1025) {
 })
 
 
-
-// lazy loading carousel videos
-// document.addEventListener("DOMContentLoaded", function() {
-//     var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-  
-//     if ("IntersectionObserver" in window) {
-//       var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-//         entries.forEach(function(video) {
-//           if (video.isIntersecting) {
-//             for (var source in video.target.children) {
-//               var videoSource = video.target.children[source];
-//               if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-//                 videoSource.src = videoSource.dataset.src;
-//               }
-//             }
-  
-//             video.target.load();
-//             video.target.classList.remove("lazy");
-//             lazyVideoObserver.unobserve(video.target);
-//           }
-//         });
-//       });
-  
-//       lazyVideos.forEach(function(lazyVideo) {
-//         lazyVideoObserver.observe(lazyVideo);
-//       });
-//     }
-// });
-  
-document.addEventListener("DOMContentLoaded", () =>  {
+document.addEventListener("DOMContentLoaded", () => {
     const lazyVideos = document.querySelectorAll(".lazy");
-  
+
     if ("IntersectionObserver" in window) {
-     const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            for (var source in entry.target.children) {
-              const videoSource = entry.target.children[source];
-              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                videoSource.src = videoSource.dataset.src;
-              }
-            }
-  
-            entry.target.load();
-            entry.target.classList.remove("lazy");
-            lazyVideoObserver.unobserve(entry.target);
-          }
+        const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    for (var source in entry.target.children) {
+                        const videoSource = entry.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            videoSource.src = videoSource.dataset.src;
+                        }
+                    }
+
+                    entry.target.load();
+                    entry.target.classList.remove("lazy");
+                    lazyVideoObserver.unobserve(entry.target);
+                }
+            });
         });
-      });
-  
-      lazyVideos.forEach((lazyVideo) => {
-        lazyVideoObserver.observe(lazyVideo);
-      });
+
+        lazyVideos.forEach((lazyVideo) => {
+            lazyVideoObserver.observe(lazyVideo);
+        });
     }
-  });
+});
