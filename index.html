@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icons8-empty-bed-50.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9196a0e44b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Ubytování U Jaklů</title>
+</head>
+<body>
+    <nav class='nav'>
+        <h5><a href="#carousel__init">Ubytování U Jaklů</a></h5>
+                
+        <ul class='nav__list'>
+            <li><a href="#carousel__init">Domů</a></li> 
+            <li><a href="#about">O nás</a></li> 
+            <li><a href="#pricelist">Ceník</a></li>
+            <li><a href="#gallery">Galerie</a></li> 
+            <li><a href="#booking">Kontakty</a></li>
+            
+        </ul>
+
+        <div class='hamburger'>
+            <div class='hamburger__first'></div>
+            <div class='hamburger__second'></div>
+            <div class='hamburger__third'></div>
+        </div>
+    </nav>
+
+    <aside class='freeBTN up'>
+        <h4>volné termíny</h4>
+    </aside>
+
+    <div class="overlay">
+        <div class="overlay__inner">
+            <h1>Léto 2021</h1>
+            <h2	id='closeOverlay'>X</h2>
+
+            <ul>
+                <lh>3.7. - 23.7.</lh>
+                <li> 4-lůžkový apartmán 350,- Kč/osoba/noc</li>
+                <li> 5-lůžkový apartmán 350,- Kč/osoba/noc</li>
+            </ul>
+            <ul>
+                <lh>8.8. - 28.8.</lh>
+                <li>4-lůžkový apartmán 350,- Kč/osoba/noc</li>
+            </ul>
+            <button class="overlay__contactBTN"><a href="#booking">Kontakty <i class="fas fa-phone"></i></a></button>
+
+        </div>
+    </div>
+
+
+   <header>
+        <div class="carousel__container">
+            <div class="carousel" id='carousel__init'>
+                    <video class='carousel__photo lazy active--video' autoplay muted loop poster='img/1_Moment.jpg'>
+                        <source data-src='img/1.mp4' type='video/mp4'>
+                    </video>
+                    <div class="carousel__inner active--slide" >
+                        <div class="carousel__caption">   
+                            <h2>Apartmány Špičák na Šumavě</h2> 
+                            <!-- <a href="#pricelist">Ceník</a> -->
+                        </div>
+                    </div>
+
+                    <video class='carousel__photo lazy' autoplay muted loop playsinline poster='img/5_Moment.jpg'>
+                        <source data-src='img/5.mp4' type='video/mp4'>
+                    </video>
+                    <div class="carousel__inner">
+                        <div class="carousel__caption">
+                            <h2>Zažijte letní Šumavskou pohodu</h2>
+                            <h3>Ubytování od 350,-Kč/osoba/noc</h3>
+                        </div>
+                    </div>
+
+                    <video class='carousel__photo lazy' autoplay muted loop playsinline poster='img/winter_Moment.jpg'>
+                        <source data-src='img/winter.mp4' type='video/mp4'>
+                    </video>
+                    <div class="carousel__inner">
+                        <div class="carousel__caption">
+                            <h2>Užijte si zimní lyžovačku</h2>
+                            <h3>Ubytování od 350,-Kč/osoba/noc</h3>
+                        </div>
+
+                    </div>     
+    
+                <div class='carousel__dots'>
+                    <button class="carousel__dots--dot active--dot" id="0"></button>
+                    <button class="carousel__dots--dot" id="1" ></button>
+                    <button class="carousel__dots--dot" id="2"></button>
+                </div>
+                
+            </div>
+        </div>
+   </header>
+
+
+  
+    <main class='about'>
+        <h1 id='about'>O nás</h1>
+     
+        <p>Nabízíme levné ubytování v soukromí na Špičáku na Śumavě. Apartmány máme k dispozici dva, čtyřlůžkový a pětilůžkový. 
+        V apartmánech je oddělená ložnice se dvojlůžkem a průchozí pokoj se dvěma(resp. třemi) lůžky. V každém apartmánu je k dispozici kuchyňský kout vybavený vším, co budete potřebovat na dovolenkové vaření. Samozřejmě je zde také WC a koupelna se sprchovým koutem.
+        Televize zde není, ale v celém objektu je k dispozici wi-fi připojení.
+        V létě můžete využít venkovní posezení s krbem. jak to u nás vypadá, uvidíte níže v <a href="#gallery">galerii.</a></p>
+
+        <h2>Co se tady dá dělat?</h2>
+        <p>Aktuální počasí a záznamy z kamer najdete <a href='https://www.zelezna-ruda.cz/zeleznaruda/webcam.asp' target="_blank">tady</a>.</p>
+        <p>V zimě se můžete těšit na lyžování. Coby kamenem dohodil je 
+        lanovka <a href='https://www.skipancir.cz/lanovkapancir/' target="_blank">  Hofmanky a Pancíř </a>. Zde je k dispozici také vlek a na vrcholu Pancíře rozhledna. Největsší lyžařský areál na české straně Šumavy je asi 500m od ubytování. Můžete si udělat výlet také na nejvyšší horu Šumavy - německý <a href='https://www.arber.de/cz/lyzarsky-areal/rodinny-lyzarsky-areal.html?T=-1%27%20OR%202%20490-490-1%3D0%200%200%201%20--%20'>Velký Javor</a>.
+        Když je sněhová nadílka bohatá, můžete vyrazit na běžky na některou z<a href="https://lyzovani.spicak.cz/cz/sekce/bezky-a-skitouring-41/" target="_blank"> běžeckých tras </a>.
+            V létě si užijete <a href='https://www.sumavanet.cz/spicak/sport.asp#tipy_turista' target="_blank">turistiku </a> v krásné přírodě. Mladí a odvážní mohou vyzkoušet také <a href='https://sumava.spicak.cz/cz/sekce/trate-78/' target="_blank">bikepark na Špičáku</a></p>
+        <p>Když dostanete hlad, můžete se najíst v některé z blízkých restaurací. Třeba u sousedů <a href='https://www.penzionavalanche.cz/restaurace' target="_blank">v Avalanchi</a> nebo pro nenáročné v asi 100 m vzdáleném <a href='http://grillmax.cz/' target="_blank">GrillMaxu </a>.
+        </p>
+        <p>Nejbližší obchod s potravinami je v Železné Rudě. Na větší nákupy můžete udělat výlet do Klatov nebo třeba za hranice do Zwieselu. </p>
+    </main>
+
+    <h1 id='pricelist'>Za kolik?</h1>
+    <section class='pricelist'>
+        <div class="card summer">
+            <h4>Léto 2021</h4>
+            <table>
+                <tr>
+                    <td>Dospělý </td>
+                    <td>350,- Kč</td>
+                </tr>
+                <tr>
+                    <td>Děti do 18 let </td>
+                    <td>325,- Kč</td>
+                </tr>
+                <tr>
+                    <td>Děti do 10 let</td>
+                    <td>250,- Kč</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card winter">
+            <h4>Zima (2. 1. - 30. 3. 2022)</h4>
+            <table>
+                <tr>
+                   <td>Dospělý </td>
+                   <td>350,-Kč</td>
+                </tr>
+                <tr>
+                    <td>Děti do 18 let </td>
+                    <td>325,- Kč</td>
+                  </tr>
+                <tr>
+                    <td>Děti do 10 let</td>
+                    <td>250,- Kč</td>
+                </tr>
+            </table>
+        </div>
+              
+        <div class="card newyear">
+            <h4>Vánoce a Silvestr 2021 </h4>
+            <table>
+                <tr>
+                   <td>Dospělý </td>
+                   <td>400,-Kč</td>
+                </tr>
+                <tr>
+                    <td>Děti do 18 let </td>
+                    <td>375,- Kč</td>
+                  </tr>
+                <tr>
+                   <td>Děti do 10 let</td>
+                   <td>300,- Kč</td>
+                </tr>
+            </table>
+            <p>Ubytování minimálně na 4 noci.</p>
+        </div>
+    </section>
+    
+    <div class="info">
+        <p>Ceny jsou za osobu / noc a platí při obsazení celého apartmánu, tj. 4-5 hostů. </p>
+        <p>V případě menšího počtu osob cena dohodou. Pro 2 osoby v apartmánu 800,- Kč/apt/noc.</p>
+        <p>Preferujeme ubytování minimálně na 2 noci. V případě zájmu o pouze 1 noc příplatek 50,- Kč/os.</p>
+        <p>Slevy mimo sezonu a pro dlouhodobé ubytování.</p>
+        <p>Turistický poplatek 25,- Kč je započítán v ceně(platí se od 18ti let).</p>
+        <p>Odjezd 9-10hod.</p>
+    </div>
+
+    <h1 id='gallery'>Jak to u nás vypadá?</h1>
+    <section class="gallery">
+        <div class="img-container"> 
+            <img src="imgs/a5_odvchodu.jpg" alt="a5 pokoj">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_pokoj.jpg" alt="a5 pokoj">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_sprcha.jpg" alt="a5 sprcha">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_koupelna.jpg" loading='lazy' alt="a5 koupelna">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_koupelna2.jpg" loading='lazy' alt="a5 koupelna">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_kout.jpg" loading='lazy' alt="a5 kuchyňka">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_kout2.jpg"  loading='lazy'alt="a5 kuchyňka">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_loznice_skrin.jpg"  loading='lazy' alt="a5 ložnicet">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_okno.jpg" loading='lazy' alt="a5 okno">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_postelvpredu.jpg" loading='lazy' alt="a5 postel">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_loznice.jpg" loading='lazy' alt="a5 ložnice">
+        </div>
+     
+        <div class="img-container">
+            <img src="imgs/a5_oknovyhled.jpg" loading='lazy' alt="a5 okno">
+        </div>
+
+        <div class="img-container">
+            <img src="imgs/a5_balkon.jpg" loading='lazy' alt="a5 balkon">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_balkon1.jpg" loading='lazy' alt="a5 balkon">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_balkonvyhled.jpg"  loading='lazy'alt="a5 vyhled">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a4_okno.jpg"  loading='lazy'alt="a4 okno">
+        </div>
+       
+        <div class="img-container">
+            <img src="imgs/a4_koupelna.jpg" loading='lazy' alt="a4 koupelna">
+        </div>
+      
+        <div class="img-container">
+            <img src="imgs/a4_sprcha.jpg" loading='lazy' alt="a4 sprcha">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_vyhled.jpg" loading='lazy' alt="a5 vyhled">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_vyhled2.jpg" loading='lazy' alt="a5 vyhled">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a5_vyhled3.jpg"loading='lazy'  alt="a5 vyhled">
+        </div>
+  
+        <div class="img-container">
+            <img src="imgs/a4_kout.jpg" loading='lazy' alt="a4 kuchyňka">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a4_oknovyhled.jpg" loading='lazy' alt="a4 vyhled">
+        </div>
+        <div class="img-container">
+            <img src="imgs/a4_vyhled.jpg" loading='lazy' alt="a4 vyhled">
+        </div>
+    </section>
+
+    <h1 id='booking'>Kontakty</h1>
+    <section class='booking flex' >
+        <div class='booking__text'>
+            <div class="phone">
+                <h3 class='phone'><i class="fas fa-phone-square-alt"></i> Telefon  </h3>
+                <p class='phone'><a href='tel:+420603949219'>603 949 219</a></p>
+            </div>
+            <div class="email">
+                <h3 class='email'><i class="fas fa-at"></i> Email</h3>
+                <p class='email'><a href='mailto:jirinajaklova@seznam.cz'>jirinajaklova@seznam.cz</a></p>
+            </div>
+            <div class="address">
+                <h3 class='address'><i class="fas fa-map-marker-alt"></i> Adresa</h3>
+                <address class='address'>Špičák 127, 340 04 Železná Ruda</address>
+            </div>
+            <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.11134859078!2d13.22498361568508!3d49.160494679318205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47752e6b86948d9d%3A0xcb03da158625de09!2zVWJ5dG92w6Fuw60gSmnFmWluYSBKYWtsb3bDoQ!5e0!3m2!1sen!2scz!4v1621612822710!5m2!1sen!2scz"  allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <form class='contact-form' action="https://formsubmit.co/marcela.jaklova@gmail.com" method="POST">
+            <h3>Kontaktní formulář</h3>
+            <input type="hidden" name="_subject" value="rezervace ubytovani">
+            <label for="name" >Vaše jméno</label>
+            <input type="text" name="name" required placeholder='Radovan Krásný'>
+            <label for="email"> Váš email</label>
+            <input type="email" name="email" placeholder="nekdo@neco.cz"> 
+            <label for="message">Text dotazu / termín rezervace</label>
+            <textarea name="message" placeholder="Sem napište zprávu" required></textarea>
+            <input type="hidden" name="_next" value="https://ubytovaniujaklu.cf/thanks.html">
+            <button id='submit' type="submit">poslat zprávu</button>
+            <p>Ať už nás kontaktujete prostřednictvím tohoto formuláře nebo přiložených kontaktů, vždy prosím počkejte na potvrzení rezervace. Děkujeme!</p>
+        </form>
+        
+    </section>
+</div>
+
+<footer>
+   <h3> Created by <a href='https://github.com/fikymar' target="_blank">FikyMar</a> 2021 </h3>
+</footer>
+
+<script src='script.js'></script>
+</body>
+</html>

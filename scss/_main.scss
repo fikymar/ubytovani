@@ -1,0 +1,54 @@
+.about {
+	background: $white;
+	border-radius: $radius;
+	margin: 2rem 2rem;
+	margin-bottom: 0;
+	height: 100vh;
+	box-shadow: 0px 0px 0px 5px $verylightviolet, 8px 8px 15px $shadowgrey,
+		-8px -8px 15px $shadowgrey;
+
+	@include breakpoint-down(medium) {
+		margin: 1rem 1rem;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		-ms-overflow-style: scroll;
+		scrollbar-width: thin;
+		scrollbar-color: $green transparent;
+
+		&::-webkit-scrollbar {
+			display: block;
+			width: 0.5rem;
+		}
+
+		&::-webkit-scrollbar-track {
+			display: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: linear-gradient($green, $orange);
+			border-radius: $radius;
+			margin-right: 1rem;
+
+			&:hover {
+				background: linear-gradient($orange, $green);
+			}
+		}
+	}
+
+	& p {
+		margin: 0 2rem;
+	}
+
+	& p:not(:last-child) {
+		padding-bottom: 2rem;
+	}
+	& p a {
+		font-weight: bold;
+		font-style: italic;
+		color: $orange;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}

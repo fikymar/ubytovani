@@ -1,0 +1,64 @@
+// colors
+$orange: #f69d3c;
+$orangeTransparent: rgba(255, 69, 0, 0.8);
+$green: orangered;
+$lightviolet: rgba(241, 231, 254, 1);
+$lightgrey: #eee;
+$greyblack: #565656;
+$lightblack: rgb(39, 37, 39);
+$shadowgrey: #cbced1;
+//$shadowgrey: #565656;
+$verylightviolet: #fffaff;
+
+$white: #ffffff;
+
+//shadow
+$text-shadow: 0px 3px 3px $lightblack;
+$hoverShadow: inset 8px 8px 8px $shadowgrey, inset -8px -8px 8px $white,
+	0px 0px 0px 5px $orange;
+$hoverShadowGreen: inset 8px 8px 8px $shadowgrey, inset -8px -8px 8px $white,
+	0px 0px 0px 5px $green;
+
+//border-radius
+$radius: 5px;
+
+//breakpoints
+@media (min-width: 1024px) {
+}
+
+$breakpoints-up: (
+	"small": "801px",
+	"medium": "1025px",
+	"large": "1381px",
+);
+
+$breakpoints-down: (
+	"xs": "500px",
+	"small": "800px",
+	"medium": "1024px",
+	"midi": "1280px",
+	"large": "1380px",
+);
+
+//mobil na šířku
+$breakpoints-down--mobile: (
+	"small": "600px",
+);
+
+@mixin breakpoint-up($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down--mobile($size) {
+	@media (max-height: map-get($breakpoints-down--mobile, $size)) {
+		@content;
+	}
+}

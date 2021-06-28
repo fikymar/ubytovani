@@ -1,0 +1,19 @@
+.main_thanks {
+	height: 100vh;
+	background-image: url("../img/bezky.jpg");
+	background-size: cover;
+	background-position: 0% 50%;
+	padding: 30vh 0;
+
+	& h1 {
+		color: $lightgrey;
+		text-shadow: $text-shadow;
+		font-family: "Pacifico", cursive;
+		font-weight: 400;
+		font-size: 3rem;
+
+		@include breakpoint-down(small) {
+			font-size: 1.5rem;
+		}
+	}
+}

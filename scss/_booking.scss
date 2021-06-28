@@ -1,0 +1,169 @@
+.booking {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 0;
+
+	@include breakpoint-down(medium) {
+		height: 200vh;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.booking__text {
+	background: $white;
+	border-radius: $radius;
+	padding: 2rem 2rem;
+	max-height: 85vh;
+	box-shadow: 0px 0px 0px 5px $verylightviolet, 8px 8px 15px $shadowgrey,
+		-8px -8px 15px $shadowgrey;
+
+	@include breakpoint-down(medium) {
+		width: calc(100vw - 2rem - 12px);
+		height: calc(100vh - 2rem);
+	}
+
+	& h3,
+	p,
+	address {
+		color: transparent;
+		background: black;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		text-shadow: 0px 3px 3px $shadowgrey;
+	}
+
+	& h3 {
+		font-family: "Caveat";
+		margin-bottom: 0.5rem;
+
+		& i {
+			color: $orange;
+			transition: color 0.35s ease-in-out;
+
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+
+	& p,
+	address {
+		margin-bottom: 1rem;
+		color: transparent;
+	}
+
+	& iframe {
+		height: 40vh;
+		width: 35vw;
+		border-radius: $radius;
+		background: $white;
+		box-shadow: $hoverShadowGreen;
+		transition: box-shadow 0.35s ease-in-out;
+		margin-top: 1rem;
+
+		@include breakpoint-down(medium) {
+			width: calc(100vw - 6rem - 12px);
+			max-height: 40vh;
+			padding: 0;
+		}
+
+		&:hover {
+			box-shadow: $hoverShadow;
+		}
+	}
+}
+
+.contact-form {
+	width: 30vw;
+	max-height: 85vh;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	border-radius: $radius;
+	background: $white;
+	box-shadow: 0px 0px 2px $orange, 0px 0px 0px 5px $verylightviolet,
+		8px 8px 15px $shadowgrey, -8px -8px 15px $shadowgrey;
+	transition: box-shadow 0.3s ease-in-out;
+	overflow: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@include breakpoint-down(medium) {
+		width: calc(100vw - 2rem - 7px);
+		height: calc(100vh - 2rem);
+	}
+
+	&:hover {
+		box-shadow: $hoverShadowGreen;
+	}
+
+	& h3 {
+		font-family: "Caveat";
+		text-align: center;
+	}
+
+	& input,
+	textarea {
+		display: block;
+		margin: 0.5rem 0;
+		padding: 1rem 1rem;
+		width: 100%;
+		height: 6vh;
+		width: 100%;
+		border-radius: $radius;
+		border: 1px solid $green;
+		outline-color: $orange;
+		box-shadow: inset 2px 2px 8px $shadowgrey, inset -2px -2px 8px $shadowgrey;
+		@include breakpoint-down(medium) {
+			height: 10vh;
+		}
+	}
+
+	& textarea {
+		height: 20vh;
+	}
+
+	& h3,
+	label {
+		color: transparent;
+		background: black;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		text-shadow: 0px 3px 3px $shadowgrey;
+	}
+
+	& label {
+		font-size: 1.5rem;
+		font-family: "Caveat";
+		width: 100%;
+		text-align: left;
+		padding-right: 1rem;
+	}
+
+	& button {
+		display: block;
+		margin: 20px 0;
+		width: 100%;
+		height: 6vh;
+
+		@include breakpoint-down(medium) {
+			height: 10vh;
+		}
+	}
+
+	& p {
+		font-size: 0.8rem;
+		text-align: center;
+	}
+
+	& ::placeholder {
+		font-family: "Montserrat", sans-serif;
+	}
+}
