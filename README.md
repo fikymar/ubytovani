@@ -1,5 +1,6 @@
 # Ubytování
-Stránky pro ubytování v soukromí \n
+Stránky pro ubytování v soukromí 
+
 live: https://ubytovaniujaklu.cf/
 
 
