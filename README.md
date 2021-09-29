@@ -1,16 +1,13 @@
 # Ubytování
-Stránky pro ubytování v soukromí 
 
-live: https://ubytovaniujaklu.cz/
+Stránky pro ubytování v soukromí
 
+live: https://ubytovani-fikymar.vercel.app/
 
- HTML, SCSS, JavaScript
- 
- 
+HTML, SCSS, JavaScript
+
 - IntersectionObserver
 - Video background
 - Responzivní web
 - Grid, Flexbox
 - Hamburger menu
-
- 
