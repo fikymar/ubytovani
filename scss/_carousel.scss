@@ -28,35 +28,6 @@
 		}
 	}
 }
-// arrows removed
-// .carousel__prevBTN,
-// .carousel__nextBTN {
-// 	position: absolute;
-// 	top: 50%;
-// 	z-index: 2;
-// 	font-size: 2rem;
-// 	color: $white;
-// 	cursor: pointer;
-// 	border-radius: 50%;
-// 	text-shadow: $text-shadow;
-
-// 	@include breakpoint-down(small) {
-// 		display: none;
-// 	}
-
-// 	& i {
-// 		transition: transform 0.5s ease-in-out, color 0.5s ease-in,
-// 			text-shadow 0.5s ease-in;
-// 	}
-// }
-
-// .carousel__prevBTN {
-// 	left: 2rem;
-// }
-
-// .carousel__nextBTN {
-// 	right: 2rem;
-// }
 
 .carousel__caption {
 	position: absolute;
