@@ -1,7 +1,7 @@
 # Ubytování
 Stránky pro ubytování v soukromí 
 
-live: https://ubytovaniujaklu.cf/
+live: https://ubytovaniujaklu.cz/
 
 
  HTML, SCSS, JavaScript
