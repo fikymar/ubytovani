@@ -1,7 +1,5 @@
 # Ubytování
 
-Stránky pro ubytování v soukromí
-
 live: https://ubytovani-fikymar.vercel.app/
 
 HTML, SCSS, JavaScript
